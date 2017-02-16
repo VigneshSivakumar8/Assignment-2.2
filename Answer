@@ -1,0 +1,287 @@
+PROBLEM 1 :
+Code :-             
+public class acad 
+  {
+  public static void main(String args[])
+  {
+	  int a=10,b=5; //Initializing two integers
+	  System.out.println(a+b); //Printing the sum of the two integers
+  }
+}
+Output :-
+15
+
+PROBLEM 2 :
+Code :-
+import java.util.*;
+public class acad 
+{
+   public static void main(String args[])
+   {
+	   int a,b;
+	   Scanner s=new Scanner(System.in);
+	   System.out.println("Enter the two numbers");
+	   a=s.nextInt(); //First number is obtained from the user
+	   b=s.nextInt(); //Second number is obtained from the user
+	   System.out.println("Sum of two numbers : "+(a+b)); //Printing the sum of two numbers
+   }
+}
+Output :-
+Enter the two numbers
+10
+5
+Sum of two numbers : 15
+
+PROBLEM 3 :
+Code :-
+import java.util.*;
+public class acad 
+{
+  public static void main(String args[])
+  {
+	  sum(); //Calling the method sum
+  }
+  static void sum()
+  {
+
+	   int a,b;
+	   Scanner s=new Scanner(System.in);
+	   System.out.println("Enter the two numbers");
+	   a=s.nextInt(); //First number is obtained from the user
+	   b=s.nextInt(); //Second number is obtained from the user
+	   System.out.println("First number is: "+a);
+	   System.out.println("Second number is: "+b);
+	   System.out.println("Sum is: "+(a+b)); //Printing the sum of two numbers
+  }
+}
+Output :-
+Enter the two numbers
+10
+5
+First number is: 10
+Second number is: 5
+Sum is: 15
+
+PROBLEM 4 :
+Code :-
+import java.util.*;
+public class acad 
+{
+  public static void main(String args[])
+  {
+	  Scanner s=new Scanner(System.in);
+	  int a,b,j,k;
+	  //Obtain inputs from user
+	  System.out.println("Enter the first number");
+	  a=s.nextInt();
+	  System.out.println("Enter the second number");
+	  b=s.nextInt();
+	  //Print the even numbers between the two numbers
+	  System.out.print("The even numbers between "+a+" and "+b+" are : ");
+	  for(int i=a;i<=b;i++)
+      {
+    	  if(i%2==0)
+    	  {
+    		 System.out.print(i+" ");
+    	  }
+      }
+	  System.out.println();
+	//Print the odd numbers between the two numbers
+	  System.out.print("The odd numbers between "+a+" and "+b+" are : ");
+	  for(int i=a;i<=b;i++)
+      {
+    	  if(i%2!=0)
+    	  {
+    		 System.out.print(i+" ");
+    	  }
+      }
+  }
+}
+Output :-
+Enter the first number
+1
+Enter the second number
+10
+The even numbers between 1 and 10 are : 2 4 6 8 10 
+The odd numbers between 1 and 10 are : 1 3 5 7 9 
+
+PROBLEM 5 :
+Code :-
+import java.util.*;
+public class acad 
+{
+   public static void main(String args[])
+   {
+	   Scanner s=new Scanner(System.in);
+	   int n,i;
+	   n=s.nextInt(); //Obtaining input from user
+	   for(i=1;i<=10;i++)
+	   {
+		   System.out.println(n+" x "+i+" = "+n*i); //Printing the multiples of the input number
+	   }
+   }
+}
+Output :-
+3
+3 x 1 = 3
+3 x 2 = 6
+3 x 3 = 9
+3 x 4 = 12
+3 x 5 = 15
+3 x 6 = 18
+3 x 7 = 21
+3 x 8 = 24
+3 x 9 = 27
+3 x 10 = 30
+
+PROBLEM 6 :
+Code :-
+import java.util.*;
+public class acad 
+{
+   public static void main(String args[])
+   {
+	   int a,b,c;
+	   Scanner s=new Scanner(System.in);
+	   System.out.println("Choice of operation");
+	   System.out.println("1.Sum of two numbers");
+	   System.out.println("2.Sum of three numbers");
+	   int ch=s.nextInt(); //Choice of user is obtained
+	   switch(ch)
+	   {
+	   case 1 : System.out.println("Enter two numbers");
+	            a=s.nextInt();
+	            b=s.nextInt();
+	            sum(a,b); //Calling the overloaded function for the first choice
+	            break;
+	   case 2 : System.out.println("Enter three numbers");
+                a=s.nextInt();
+                b=s.nextInt();
+                c=s.nextInt();
+                sum(a,b,c); //Calling the overloaded function for the second choice
+                break;         
+	   }
+	   
+	  
+     }
+   static void sum(int x,int y)
+   {
+	   System.out.print("Sum of two numbers is : "+(x+y));   //Printing the output
+   }
+   static void sum(int x,int y,int z)
+   {
+	   System.out.print("Sum of three numbers is : "+(x+y+z)); //Printing the output
+   }
+}
+Output :-
+Choice of operation
+1.Sum of two numbers
+2.Sum of three numbers
+2
+Enter three numbers
+10
+20
+30
+Sum of three numbers is : 60
+
+PROBLEM 7 :
+Code :-
+import java.util.*;
+public class acad 
+{
+   public static void main(String args[])
+   {
+	   int a,b,c,ans=0;
+	   Scanner s=new Scanner(System.in);
+	   System.out.println("Choice of operation");
+	   System.out.println("1.Sum of two numbers");
+	   System.out.println("2.Sum of three numbers");
+	   int ch=s.nextInt(); //Choice of user is obtained
+	   switch(ch)
+	   {
+	   case 1 : System.out.println("Enter two numbers");
+	            a=s.nextInt();
+	            b=s.nextInt();
+	            ans=sum(a,b); //Calling the overloaded function for the first choice
+	            System.out.print("Sum of two numbers is : "+ans);
+	            break;
+	   case 2 : System.out.println("Enter three numbers");
+                a=s.nextInt();
+                b=s.nextInt();
+                c=s.nextInt();
+                ans=sum(a,b,c); //Calling the overloaded function for the second choice
+                System.out.print("Sum of three numbers is : "+ans);
+                break;         
+	   }
+	   
+	  
+     }
+   static int sum(int x,int y)
+   {
+	   return x+y;   //Returning the sum of two numbers
+   }
+   static int sum(int x,int y,int z)
+   {
+	   return x+y+z; //Returning the sum of three numbers
+   }
+}
+Output :-
+Choice of operation
+1.Sum of two numbers
+2.Sum of three numbers
+1
+Enter two numbers
+10
+20
+Sum of two numbers is : 30
+
+PROBLEM 8 :
+Code :-
+import java.util.*;
+public class acad 
+{
+   public static void main(String args[])
+   {
+	   int temp;
+	   Scanner s=new Scanner(System.in);
+	   System.out.println("Enter the array size : ");
+	   int n=s.nextInt(); //Obtaining array size as input
+	   int arr[]=new int[n];
+	   System.out.println("Enter the array elements");
+	   for(int i=0;i<n;i++)
+	   {
+		   arr[i]=s.nextInt(); //Obtaining the array elements
+	   }
+	   for(int i=0;i<n;i++)
+	   {
+		   for(int j=i+1;j<n;j++) 
+           {
+               if (arr[i] < arr[j]) 
+               {
+                   temp = arr[i];
+                   arr[i] = arr[j];
+                   arr[j] = temp;
+               }
+           }
+		   //Array elements are sorted in descending order
+	   }
+	   for(int i=0;i<arr.length;i++)
+		   System.out.println(arr[i]); //Printing the sorted array
+   }
+}
+Output :-
+Enter the array size : 
+5
+Enter the array elements
+1
+2
+3
+5
+4
+Sorted array is 
+5
+4
+3
+2
+1
+
